@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgb(238, 174, 202);
+      background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 0) 100%);
+    }
+
+    .custom-link {
+      color: #c22805;
+      text-decoration: none;
+      font-size: 22px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 600;
+    }
+
+    .custom-link:hover {
+      color: #4218e8;
+    }
+
+    #btn:hover {
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid" class="sticky-top">
+      <a href="#" class="custom-link">EMPLOYEE MANAGEMENT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/main">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/show">HISTORY</a>
+          </li>
+          <li>
+            <a class="nav-link active" href="#">ATTENDENCE</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              GENDER
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">MALE</a></li>
+              <li><a class="dropdown-item" href="#">FEMALE</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/query">QUERY'S</a>
+          </li>
+        </ul> 
+        <a href="/save"> <button type="button" id="btns" class="btn btn-secondary btn-sm">ADD EMPLOYEE+
+          </button></a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" id="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" id="search">Search</button> &nbsp;&nbsp;&nbsp;
+          <a type="button" class="btn btn-dark" href="/Logout"> Logout</a> &nbsp;&nbsp;&nbsp;
+          
+        </form>
+      </div>
+    </div>
+  </nav>
+
+</body>
+
+</html>

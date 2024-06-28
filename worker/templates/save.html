@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Employee Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style> 
+        footer {
+          text-align: center;
+          padding: 3px;
+          background-color: rgb(46, 44, 44);
+          color: rgb(243, 245, 242);
+          text-align: center;
+          padding: 20px;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+        }
+    
+        .hero-button {
+          background-color: #FF5733;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          font-size: 1.2em;
+          text-decoration: none;
+          transition: background-color 0.3s;
+          margin-left: 650px;
+    
+        }
+    
+        .hero-button:hover {
+          background-color: #FF8C00;
+        }
+        .learnmore{
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+    
+            .navbar {
+              position: sticky;
+              top: 0;
+              z-index: 1000;
+              background: rgb(238, 174, 202);
+              background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 0) 100%);
+            }
+        
+            .custom-link {
+              color: #c22805;
+              text-decoration: none;
+              font-size: 22px;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              font-weight: 600;
+            }
+        
+            .custom-link:hover {
+              color: #4218e8;
+            }
+        
+            #btn:hover {
+              background-color: white;
+            }
+          
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" class="sticky-top">
+          <a href="#" class="custom-link">EMPLOYEE MANAGEMENT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/main">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/show">HISTORY</a>
+              </li>
+              <li>
+                <a class="nav-link active" href="#">ABOUT US</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  GENDER
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">MALE</a></li>
+                  <li><a class="dropdown-item" href="#">FEMALE</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">QUERY'S</a>
+              </li>
+            </ul> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              &nbsp;&nbsp;&nbsp;
+              <button class="btn btn-outline-success" type="submit">Search</button> &nbsp;&nbsp;&nbsp;
+              <a type="button" class="btn btn-dark" href="/login">Login</a> &nbsp;&nbsp;&nbsp;
+              <a type="button" class="btn btn-dark" href="/signup">Signup</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+  {% include 'contents.html' %}
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Fill Employee Details</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" class="form-control" id="first_name" name="first_name">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" class="form-control" id="last_name" name="last_name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="Phone_number">Phone Number:</label>
+                <input type="tel" class="form-control" id="Phone_number" name="Phone_number">
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="date_of_birth">Date of Birth:</label>
+                <input type="date" class="form-control" id="date_of_birth" name="date_of_birth">
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" class="form-control" id="department" name="department">
+            </div>
+            <div class="form-group">
+                <label for="position">Position:</label>
+                <input type="text" class="form-control" id="position" name="position">
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" class="form-control-file" id="image" name="image">
+            </div>
+            <div class="form-group">
+                <label for="datehired">Date Hired:</label>
+                <input type="date" class="form-control" id="datehired" name="datehired">
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input type="number" class="form-control" id="salary" name="salary">
+            </div>
+            <div class="form-group">
+                <label for="isactive">Is Active:</label>
+                <input type="text" class="form-control" id="isactive" name="isactive">
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+        
+    </div>
+    <div class="learnmore">
+
+        <button href="#" class="hero-button">Know more</button>
+    
+      </div>
+    
+      
+    
+    
+      <footer>
+        <p>BY:DIVITHKUMAR</p>
+        <p>EMAIL:<a href="#"> dividivithkumar@gmail.com</a></p>
+        <p>CONTACT : 6369273862</p>
+      </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

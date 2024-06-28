@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement Page</title>
+    <style>
+       
+       
+        .announcement {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            margin-top: 30px;
+            
+          
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .announcement-meta {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+            
+        }
+        .attachments {
+            margin-top: 10px;
+        }
+        @keyframes blink {
+            0% {
+                color: #ff0000; 
+            }
+            50% {
+                color: #ffffff; 
+                
+            }
+            100% {
+                color: #ff0000; 
+            }
+        }
+        .blink {
+            animation: blink 1s infinite; 
+            font-weight: 800;
+        }
+        .note{
+            font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 500;
+        }
+        .announcement{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="announcement">
+       <h2 class="blink">Important Announcement</h2> 
+        <div class="announcement-meta">
+            <span>Date: March 16, 2024</span><br>
+            <span>From: Owner name</span>
+        </div>
+        <p class="note">We have an important announcement about working hours, so kindly read the below attachment</p>
+        <div class="attachments">
+            <strong>Attachment:</strong>
+            
+                <a href="#" class="announcement">Announcement Document</a> <br>
+            
+            
+        </div>
+    </div>
+
+    
+</body>
+</html>

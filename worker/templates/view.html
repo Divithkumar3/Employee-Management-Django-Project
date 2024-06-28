@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .employee-details {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        
+        .employee-image {
+            max-width: 300px;
+            height: auto;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .detail-label {
+            font-weight: bold;
+        }
+        
+        .detail-value {
+            margin-bottom: 10px;
+        }
+        
+        .detail-value:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                max-width: 100%;
+                border-radius: 0;
+            }
+        
+            .employee-image {
+                max-width: 100%;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+        
+</style>
+</head>
+<body>
+    <div class="container">
+        <img class="employee-image" src="staff1.jpg" alt="Employee Image">
+        <div class="employee-details">
+            <h1>Employee Details</h1>
+            <div class="detail-label">First Name:</div>
+            <div>{{ employee.first_name }}</div>
+            <div class="detail-label">Last Name:</div>
+            <div>{{ employee.last_name }}</div>
+            <div class="detail-label">Email:</div>
+            <div>{{ employee.email }}</div>
+            <div class="detail-label">Mobile Number:</div>
+            <div>{{ employee.Phone_number }}</div>
+            <div class="detail-label">Address:</div>
+            <div>{{ employee.address }}</div>
+            <div class="detail-label">Date of Birth:</div>
+            <div>{{ employee.date_of_birth }}</div>
+            <div class="detail-label">Department:</div>
+            <div>{{ employee.department }}</div>
+            <div class="detail-label">Position:</div>
+            <div>{{ employee.position }}</div>
+            <div class="detail-label">Date Hired:</div>
+            <div>{{ employee.date_hired }}</div>
+            <div class="detail-label">Salary:</div>
+            <div>{{ employee.salary }}</div>
+            <div class="detail-label">Is Active:</div>
+            <div>{{ employee.is_active }}</div>
+        </div>
+    </div>
+</body>
+</html>
